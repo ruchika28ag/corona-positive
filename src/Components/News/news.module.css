@@ -1,6 +1,6 @@
 .news {
     width: 70%;
-    margin: 4em;
+    margin-top: 4em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,4 +22,10 @@
 .loadBtn:hover {
     color: var(--colorBG-light);
     background: aqua;
+}
+
+@media only screen and (max-width: 800px) {
+    .news {
+        width: 85%;
+    }
 }

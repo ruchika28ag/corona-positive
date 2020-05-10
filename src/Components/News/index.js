@@ -3,20 +3,24 @@ import useSWRPost from 'Hooks/useSWRPost';
 import NewsCard from 'Components/NewsCard';
 import styles from './news.module.css';
 import Loader from 'Components/Loader';
+import config from 'config';
 
 const News = () => {
     const [news, setNews] = useState([]);
     const [after, setAfter] = useState({});
 
-    const [getNews, { isValidating }] = useSWRPost('http://localhost:5000/api/news', {
-        onSuccess: (r) => {
-            setNews(n => n.concat(r.data))
-            setAfter(r.after)
-        }
+    const handleSuccess = (r) => {
+        setNews(n => n.concat(r.data))
+        setAfter(r.after)
+    }
+
+    const [getNews, { isValidating }] = useSWRPost(`${config.apiURL}/api/news`, {
+        onSuccess: handleSuccess
     })
 
     useEffect(() => {
         getNews({ after })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (
