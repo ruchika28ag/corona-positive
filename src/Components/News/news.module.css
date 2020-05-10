@@ -5,3 +5,21 @@
     flex-direction: column;
     align-items: center;
 }
+
+.loadBtn {
+    padding: 1em 2em;
+    background: var(--colorBG-light);
+    color: aqua;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: 500;
+    margin: 2em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.loadBtn:hover {
+    color: var(--colorBG-light);
+    background: aqua;
+}

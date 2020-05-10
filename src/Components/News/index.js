@@ -29,7 +29,11 @@ const News = () => {
                     url={n.url}
                 />)
                 )}
-                {isValidating && <Loader />}
+                {isValidating ?
+                    <Loader />
+                :
+                    <button className={styles.loadBtn} onClick={() => getNews({ after })}>Load More</button>
+                }
             </section>
         </>
     )
