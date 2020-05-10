@@ -1,0 +1,37 @@
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    /* border: solid 2px var(--colorFG); */
+    border-radius: 10px;
+    margin: 1em 0;
+    width: 100%;
+    height: max-content;
+    text-align: left;
+    background: var(--colorBG-light);
+    overflow: hidden;
+}
+
+.thumbnail {
+    width: 20%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em 2em;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+.title {
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+.url {
+  text-decoration: none;
+  color: aqua;
+}

@@ -1,0 +1,67 @@
+/* loader-32 */
+.loader {
+  margin: 1em 0;
+}
+.ballWrapper {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  margin: 0 10px;
+  padding-bottom: 10px;
+}
+.ballHolder {
+  position: relative;
+  overflow: hidden;
+  height: 130px;
+}
+.ball {
+  position: absolute;
+  bottom:0; left: 50%;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 25px;
+  border: 1px solid rgb(247,77,47);
+  background-color: rgb(255,99,71);
+  transform: translateY(0px) translateX(-50%) translateZ(0);
+  transform-origin: center;
+  animation: loader32 1s infinite linear;
+  z-index: 2;
+}
+.shadow {
+  position: absolute;
+  bottom: 9px;
+  width: 100%;
+  height: 6px;
+  border-radius: 50%;
+  background: rgb(161,160,161);
+  opacity: 1;
+  animation: shadow32 1s infinite linear;
+  z-index: 1;
+}
+.ballWrapper:nth-of-type(1) .ball,
+.ballWrapper:nth-of-type(1) .shadow {
+  animation-delay: 0s;
+}
+.ballWrapper:nth-of-type(2) .ball,
+.ballWrapper:nth-of-type(2) .shadow {
+  animation-delay: 0.2s;
+}
+.ballWrapper:nth-of-type(3) .ball,
+.cubeWrapper:nth-of-type(3) .shadow {
+  animation-delay: 0.3s;
+}
+
+@keyframes loader32 {
+  0%   { transform: translate(-50%, 10px); }
+  40%  { transform: translate(-50%, -90px); width: 30px; height: 30px; }
+  50%  { transform: translate(-50%, -100px); width: 30px; height: 30px; }
+  65%  { transform: translate(-50%, -90px); width: 30px; height: 30px; }
+  75%  { transform: translate(-50%, 0px); width: 30px; height: 30px; }
+  100% { transform: translate(-50%, 10px);  width: 50px; height: 15px;}
+}
+@keyframes shadow32 {
+  0%   { transform: scale(0.9, 0.9); opacity: 1; }
+  50%  { transform: scale(0.2, 0.2); opacity: 0.3; }
+  100% { transform: scale(0.9, 0.9); opacity: 1; }
+}
