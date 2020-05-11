@@ -1,6 +1,6 @@
 # Corona Positive
 
-Front-end for the [Corona Positive API](https://github.com/ruchika28ag/corona-positive-api) written with the of ReactJS.
+Front-end for the [Corona Positive API](https://github.com/ruchika28ag/corona-positive-api) written with the help of ReactJS.
 
 
 ## Installation and Usage
