@@ -3,12 +3,12 @@
     flex-wrap: wrap;
     /* border: solid 2px var(--colorFG); */
     border-radius: 10px;
-    margin: 1em 0;
     width: 100%;
     height: max-content;
     text-align: left;
     background: var(--colorBG-light);
     overflow: hidden;
+    word-wrap: break-word;
 }
 
 .thumbnail {
@@ -34,4 +34,27 @@
 .url {
   text-decoration: none;
   color: aqua;
+}
+
+.link {
+    text-decoration: none;
+    width: 100%;
+    color: inherit;
+    margin: 1em 0;
+}
+
+@media only screen and (max-width: 800px) {
+    .thumbnail {
+        width: 100%;
+        min-height: 170px;
+    }
+
+    .text {
+        width: 100%;
+        padding: 1.5em 1em;
+    }
+
+    .title {
+        font-size: 1.1em;
+    }
 }

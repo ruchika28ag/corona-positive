@@ -1,0 +1,5 @@
+:3333
+
+file_server
+root build
+try_files {path} /index.html
